@@ -70,10 +70,22 @@ public final class InternalParticlesView: UIView {
     }
 }
 
-@_functionBuilder
+@resultBuilder
 struct EmitterCellBuilder {
-    static func buildBlock(_ cells: CAEmitterCell...) -> [CAEmitterCell] {
-      Array(cells)
+    static func buildBlock(_ cells: [CAEmitterCell]...) -> [CAEmitterCell] {
+        cells.flatMap { $0 }
+    }
+
+    static func buildExpression(_ expression: CAEmitterCell) -> [CAEmitterCell] {
+        [expression]
+    }
+
+    static func buildExpression(_ expression: [CAEmitterCell]) -> [CAEmitterCell] {
+        expression
+    }
+
+    static func buildArray(_ components: [[CAEmitterCell]]) -> [CAEmitterCell] {
+        components.flatMap { $0 }
     }
 }
 
