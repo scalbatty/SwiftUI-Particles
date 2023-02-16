@@ -228,6 +228,12 @@ extension EmitterCell {
         return self
     }
 
+    @available(iOS 14, *)
+    @inlinable func color(_ color: Color) -> Self {
+        self.color = UIColor(color).cgColor // For some reason it's required to generate cgColor via UIColor otherwise it returns nil sometimes
+        return self
+    }
+
     @inlinable func xAcceleration(_ xAcceleration: CGFloat) -> Self {
         self.xAcceleration = xAcceleration
         return self
