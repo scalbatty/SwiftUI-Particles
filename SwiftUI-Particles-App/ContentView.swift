@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import SwiftUI_Particles
 
 struct EmitterConfig: Identifiable {
     let emitter: ParticlesEmitter

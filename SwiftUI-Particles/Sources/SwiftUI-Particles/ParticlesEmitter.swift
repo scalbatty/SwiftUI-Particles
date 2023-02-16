@@ -144,7 +144,7 @@ public class EmitterCell: CAEmitterCell {
         super.init(coder: coder)
     }
 
-    func copyEmitter() -> EmitterCell {
+    public func copyEmitter() -> EmitterCell {
         return super.copy() as! EmitterCell
     }
 }

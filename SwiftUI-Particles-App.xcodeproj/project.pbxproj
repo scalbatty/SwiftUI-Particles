@@ -3,21 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0106AFB0299E785B00B0B7F5 /* SwiftUI-Particles in Frameworks */ = {isa = PBXBuildFile; productRef = 0106AFAF299E785B00B0B7F5 /* SwiftUI-Particles */; };
 		8E4CAB0E23AFD53800B55B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CAB0D23AFD53800B55B15 /* AppDelegate.swift */; };
 		8E4CAB1023AFD53800B55B15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CAB0F23AFD53800B55B15 /* SceneDelegate.swift */; };
 		8E4CAB1223AFD53800B55B15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CAB1123AFD53800B55B15 /* ContentView.swift */; };
 		8E4CAB1423AFD53B00B55B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CAB1323AFD53B00B55B15 /* Assets.xcassets */; };
 		8E4CAB1723AFD53B00B55B15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CAB1623AFD53B00B55B15 /* Preview Assets.xcassets */; };
 		8E4CAB1A23AFD53B00B55B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CAB1823AFD53B00B55B15 /* LaunchScreen.storyboard */; };
-		8E4CAB2223AFD55B00B55B15 /* ParticlesEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CAB2123AFD55B00B55B15 /* ParticlesEmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E4CAB0A23AFD53800B55B15 /* SwiftUI-Particles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Particles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01BC4513299E774E000F10F6 /* SwiftUI-Particles */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "SwiftUI-Particles"; sourceTree = "<group>"; };
+		8E4CAB0A23AFD53800B55B15 /* SwiftUI-Particles-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Particles-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4CAB0D23AFD53800B55B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E4CAB0F23AFD53800B55B15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E4CAB1123AFD53800B55B15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		8E4CAB1623AFD53B00B55B15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E4CAB1923AFD53B00B55B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E4CAB1B23AFD53B00B55B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E4CAB2123AFD55B00B55B15 /* ParticlesEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesEmitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,24 +33,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0106AFB0299E785B00B0B7F5 /* SwiftUI-Particles in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0106AFAE299E785B00B0B7F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E4CAB0123AFD53700B55B15 = {
 			isa = PBXGroup;
 			children = (
+				01BC4513299E774E000F10F6 /* SwiftUI-Particles */,
 				8E4CAB0C23AFD53800B55B15 /* SwiftUI-Particles-App */,
 				8E4CAB0B23AFD53800B55B15 /* Products */,
+				0106AFAE299E785B00B0B7F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8E4CAB0B23AFD53800B55B15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E4CAB0A23AFD53800B55B15 /* SwiftUI-Particles.app */,
+				8E4CAB0A23AFD53800B55B15 /* SwiftUI-Particles-App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,7 +71,6 @@
 				8E4CAB0D23AFD53800B55B15 /* AppDelegate.swift */,
 				8E4CAB0F23AFD53800B55B15 /* SceneDelegate.swift */,
 				8E4CAB1123AFD53800B55B15 /* ContentView.swift */,
-				8E4CAB2123AFD55B00B55B15 /* ParticlesEmitter.swift */,
 				8E4CAB1323AFD53B00B55B15 /* Assets.xcassets */,
 				8E4CAB1823AFD53B00B55B15 /* LaunchScreen.storyboard */,
 				8E4CAB1B23AFD53B00B55B15 /* Info.plist */,
@@ -81,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E4CAB0923AFD53800B55B15 /* SwiftUI-Particles */ = {
+		8E4CAB0923AFD53800B55B15 /* SwiftUI-Particles-App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E4CAB1E23AFD53B00B55B15 /* Build configuration list for PBXNativeTarget "SwiftUI-Particles" */;
+			buildConfigurationList = 8E4CAB1E23AFD53B00B55B15 /* Build configuration list for PBXNativeTarget "SwiftUI-Particles-App" */;
 			buildPhases = (
 				8E4CAB0623AFD53800B55B15 /* Sources */,
 				8E4CAB0723AFD53800B55B15 /* Frameworks */,
@@ -93,9 +102,12 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftUI-Particles";
+			name = "SwiftUI-Particles-App";
+			packageProductDependencies = (
+				0106AFAF299E785B00B0B7F5 /* SwiftUI-Particles */,
+			);
 			productName = "SwiftUI-Particles";
-			productReference = 8E4CAB0A23AFD53800B55B15 /* SwiftUI-Particles.app */;
+			productReference = 8E4CAB0A23AFD53800B55B15 /* SwiftUI-Particles-App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E4CAB0923AFD53800B55B15 /* SwiftUI-Particles */,
+				8E4CAB0923AFD53800B55B15 /* SwiftUI-Particles-App */,
 			);
 		};
 /* End PBXProject section */
@@ -150,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4CAB0E23AFD53800B55B15 /* AppDelegate.swift in Sources */,
-				8E4CAB2223AFD55B00B55B15 /* ParticlesEmitter.swift in Sources */,
 				8E4CAB1023AFD53800B55B15 /* SceneDelegate.swift in Sources */,
 				8E4CAB1223AFD53800B55B15 /* ContentView.swift in Sources */,
 			);
@@ -336,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E4CAB1E23AFD53B00B55B15 /* Build configuration list for PBXNativeTarget "SwiftUI-Particles" */ = {
+		8E4CAB1E23AFD53B00B55B15 /* Build configuration list for PBXNativeTarget "SwiftUI-Particles-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E4CAB1F23AFD53B00B55B15 /* Debug */,
@@ -346,6 +357,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0106AFAF299E785B00B0B7F5 /* SwiftUI-Particles */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "SwiftUI-Particles";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E4CAB0223AFD53700B55B15 /* Project object */;
 }
