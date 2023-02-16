@@ -15,16 +15,16 @@ public struct ParticlesEmitter: UIViewRepresentable {
     var center: CGPoint = .zero
     var emitterSize: CGSize = .init(width: 1, height: 1)
     var shape: CAEmitterLayerEmitterShape = .line
-    var cells: [CAEmitterCell] = []
     var beginTime: CFTimeInterval = 0
+    var cells: [CAEmitterCell] = []
 
     public func updateUIView(_ uiView: InternalParticlesView, context: UIViewRepresentableContext<ParticlesEmitter>) {
         uiView.emit(
             from: center,
             size: emitterSize,
             shape: shape,
-            cells: cells,
-            beginTime: beginTime
+            beginTime: beginTime,
+            cells: cells
         )
     }
 
@@ -34,8 +34,8 @@ public struct ParticlesEmitter: UIViewRepresentable {
             from: center,
             size: emitterSize,
             shape: shape,
-            cells: cells,
-            beginTime: beginTime
+            beginTime: beginTime,
+            cells: cells
         )
         return view
     }
@@ -46,9 +46,9 @@ extension ParticlesEmitter {
         return ParticlesEmitter(
             center: self.center,
             emitterSize: size,
-            shape: shape,
-            cells: self.cells,
-            beginTime: self.beginTime
+            shape: self.shape,
+            beginTime: self.beginTime,
+            cells: self.cells
         )
     }
 
@@ -57,8 +57,8 @@ extension ParticlesEmitter {
             center: position,
             emitterSize: self.emitterSize,
             shape: shape,
-            cells: self.cells,
-            beginTime: self.beginTime
+            beginTime: self.beginTime,
+            cells: self.cells
         )
     }
 
@@ -67,8 +67,8 @@ extension ParticlesEmitter {
             center: self.center,
             emitterSize: self.emitterSize,
             shape: shape,
-            cells: self.cells,
-            beginTime: self.beginTime
+            beginTime: self.beginTime,
+            cells: self.cells
         )
     }
 
@@ -77,8 +77,8 @@ extension ParticlesEmitter {
             center: self.center,
             emitterSize: self.emitterSize,
             shape: self.shape,
-            cells: self.cells,
-            beginTime: beginTime
+            beginTime: beginTime,
+            cells: self.cells
         )
     }
 }
@@ -92,7 +92,7 @@ public final class InternalParticlesView: UIView {
     /// - Parameter center: center of the emitter
     /// - Parameter size: size of the emitter
     /// - Parameter cells: all the CAEmitterCell
-    func emit(from center: CGPoint, size: CGSize, shape: CAEmitterLayerEmitterShape, cells: [CAEmitterCell], beginTime: CFTimeInterval) {
+    func emit(from center: CGPoint, size: CGSize, shape: CAEmitterLayerEmitterShape, beginTime: CFTimeInterval, cells: [CAEmitterCell]) {
         if particleEmitter == nil {
             particleEmitter = CAEmitterLayer()
             layer.addSublayer(particleEmitter!)
