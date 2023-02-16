@@ -41,7 +41,7 @@ public struct ParticlesEmitter: UIViewRepresentable {
     }
 }
 
-extension ParticlesEmitter {
+public extension ParticlesEmitter {
     func emitterSize(_ size: CGSize) -> Self {
         return ParticlesEmitter(
             center: self.center,
@@ -107,25 +107,25 @@ public final class InternalParticlesView: UIView {
 }
 
 @resultBuilder
-struct EmitterCellBuilder {
-    static func buildBlock(_ cells: [CAEmitterCell]...) -> [CAEmitterCell] {
+public struct EmitterCellBuilder {
+    public static func buildBlock(_ cells: [CAEmitterCell]...) -> [CAEmitterCell] {
         cells.flatMap { $0 }
     }
 
-    static func buildExpression(_ expression: CAEmitterCell) -> [CAEmitterCell] {
+    public static func buildExpression(_ expression: CAEmitterCell) -> [CAEmitterCell] {
         [expression]
     }
 
-    static func buildExpression(_ expression: [CAEmitterCell]) -> [CAEmitterCell] {
+    public static func buildExpression(_ expression: [CAEmitterCell]) -> [CAEmitterCell] {
         expression
     }
 
-    static func buildArray(_ components: [[CAEmitterCell]]) -> [CAEmitterCell] {
+    public static func buildArray(_ components: [[CAEmitterCell]]) -> [CAEmitterCell] {
         components.flatMap { $0 }
     }
 }
 
-extension ParticlesEmitter {
+public extension ParticlesEmitter {
     init(@EmitterCellBuilder _ content: () -> [CAEmitterCell]) {
         self.init(cells: content())
     }
@@ -135,12 +135,12 @@ extension ParticlesEmitter {
     }
 }
 
-class EmitterCell: CAEmitterCell {
-    override init() {
+public class EmitterCell: CAEmitterCell {
+    public override init() {
         super.init()
     }
 
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
@@ -150,15 +150,15 @@ class EmitterCell: CAEmitterCell {
 }
 
 
-extension EmitterCell {
+public extension EmitterCell {
     /// Content for the emitter cell, it is either an image, or a circle.
     /// NB: It could easily be extended for other shapes.
-    public enum Content {
+    enum Content {
         case image(UIImage)
         case circle(CGFloat)
     }
 
-    @inlinable func content(_ content: Content) -> Self {
+    func content(_ content: Content) -> Self {
         self.contents = content.image.cgImage
         return self
     }
